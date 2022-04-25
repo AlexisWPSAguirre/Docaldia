@@ -1,3 +1,146 @@
+/* New styles*/
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('fuentes/poppins/Poppins-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Poppins-Medium;
+    src: url('fuentes/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Poppins-Bold;
+    src: url('fuentes/poppins/Poppins-Bold.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Poppins-SemiBold;
+    src: url('fuentes/poppins/Poppins-SemiBold.ttf'); 
+  }
+  
+.container-login {
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+    background: linear-gradient(to right, #00dbde, #fc00ff);
+  }
+
+  .wrap-login {
+    width: 400px;
+    background: #eceff1;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 77px 55px 53px 55px;
+    -webkit-box-shadow: 25px 40px 28px 0px rgba(0, 0, 0, 0.38);
+   /* box-shadow: eje-x | eje-y | blur-radius | color */
+  }
+  .login-form {
+    width: 100%;
+  }
+  .login-form-title {
+    display: block;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: #333333;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+  }
+  .input100 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+  
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  .focus-efecto {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .container-login-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+  }
+  
+  .wrap-login-form-btn {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 40px 5px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .login-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: #a64bf4;
+    background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+    top: 0;
+    left: -100%;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login-form-btn {
+    font-family: Poppins-Medium;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .wrap-login-form-btn:hover .login-form-bgbtn {
+    left: 0;
+  }
 /*Estilos dedicados al inicio de sesion de orfeo */
 *{
     margin: 0;
@@ -91,3 +234,4 @@ input{
 #krd , #drd{
     margin-top: 8px;
 }
+
