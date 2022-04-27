@@ -249,6 +249,7 @@ $datosEnvio = "$fechah&" . session_name() . "=" . trim(session_id()) . "&krd=$kr
         ?>
         <input type="hidden" name="ornot" value="1">
     </form>
+    <!--
     <div class="pop">
         <section id="top">
             <div class="row">
@@ -264,7 +265,6 @@ $datosEnvio = "$fechah&" . session_name() . "=" . trim(session_id()) . "&krd=$kr
                 <div class=" col-md-6 blanco"> </div>
             </div>
         </section>
-        <!--
         <section id="bot">
             <div class="cuerpo">
                 <form action="login.php?fechah=<?= $fechah ?>" method="post" onSubmit="MM_validateForm('krd', '', 'R', 'drd', '', 'R'); return document.MM_returnValue" name="form33" >
@@ -323,7 +323,7 @@ $datosEnvio = "$fechah&" . session_name() . "=" . trim(session_id()) . "&krd=$kr
                         <input type=hidden name=tipo_carp value=0>
                         <input type=hidden name=carpeta value=0>
                         <input type=hidden name=order value='radi_nume_radi'>
-                        <input id="btn_frmlog_sub" name="Submit" type="submit" class="login-form-btn" value="Ingresar" data-toggle="modal" data-target="#myModal" >
+                        <button id="btn_frmlog_sub" name="Submit" type="submit" class="login-form-btn" value="Ingresar" data-toggle="modal" data-target="#myModal">Ingresar</button>
                     </div>
                 </div>
             </form>
