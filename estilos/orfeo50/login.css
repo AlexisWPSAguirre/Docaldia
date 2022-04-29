@@ -1,22 +1,22 @@
 /*--- EStilos news ---*/
 @font-face {
   font-family: Poppins-Regular;
-  src: url('fuentes/poppins/Poppins-Regular.ttf'); 
+  src: url('../../fuentes/Poppins-Regular.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('fuentes/poppins/Poppins-Medium.ttf'); 
+  src: url('../../fuentes/Poppins-Medium.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('fuentes/poppins/Poppins-Bold.ttf'); 
+  src: url('../../fuentes/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('fuentes/poppins/Poppins-SemiBold.ttf'); 
+  src: url('../../fuentes/Poppins-SemiBold.ttf'); 
 }
 
 *{
