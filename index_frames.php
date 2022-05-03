@@ -236,10 +236,10 @@ $logo = 'logoEntidad.png';
                 Fecha: 20-11-2018
                 Información: Forma en la que se carga el sub menú del menú, radicación y carpetas
                 ***/
-                $('#submenu').append('<li class="submenuNew"></li>');
+                
                 var arr = Array.prototype.slice.call(tag);
                 $(tag).each(function(index, el) {
-                    $('#submenu .submenuNew').append('<li>', el);
+                    $('#submenu').append('<li>', el);
                 });
 
                 $('#submenu2').append('<li class="submenu2New"></li>');
@@ -307,6 +307,20 @@ $logo = 'logoEntidad.png';
                     <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Components:</h6>
                     <a class="collapse-item" href="buttons.php">Buttons</a>
+                    <a class="collapse-item" href="cards.php">Cards</a>
+                    </div>
+                </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item" id="">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu">
+                    <i class="fas fa-fw fa-cog">
+                    </i>
+                    <span>Men&uacute;</span>
+                </a>    
+                <div id="collapseMenu" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" >
+                    <div class="bg-white py-2 collapse-inner rounded" id="submenu">
+                  
                     <a class="collapse-item" href="cards.php">Cards</a>
                     </div>
                 </div>
@@ -570,10 +584,10 @@ $logo = 'logoEntidad.png';
             <!-- Despegable de carpetas -->
             <div id="header">
                 <nav> 
-                    <ul class="nav">
+                    <ul class="">
                         <li class="border-b"><a><span class="glyphicon glyphicon-list"></span>
                                 <ul class="red" id="submenu">
-                                    <li class="botline"><a href="#"><strong>Men&uacute;</strong></a></li>
+                                    <li class="botline" id=""><a href="#"><strong>Men&uacute;</strong></a></li>
                                 </ul>
                             </a>
                         </li>
