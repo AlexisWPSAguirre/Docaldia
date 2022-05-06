@@ -304,7 +304,8 @@ $datosEnvio = "$fechah&" . session_name() . "=" . trim(session_id()) . "&krd=$kr
     -->
     <div class="container-login">
         <div class="wrap-login">
-        <form action="login.php?fechah=<?= $fechah ?>" method="post" onSubmit="MM_validateForm('krd', '', 'R', 'drd', '', 'R'); return document.MM_returnValue" name="form33" id="formLogin" class="login-form validate-form">
+            <img src="estilos/docaldia_imagen/user.png" class="avatar" alt="">
+            <form action="login.php?fechah=<?= $fechah ?>" method="post" onSubmit="MM_validateForm('krd', '', 'R', 'drd', '', 'R'); return document.MM_returnValue" name="form33" id="formLogin" class="login-form validate-form">
                 <span class="login-form-title">DOCALDIA</span>
                 
                 <div class="wrap-input100" data-validate = "Usuario incorrecto">
