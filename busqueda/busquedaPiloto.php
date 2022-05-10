@@ -118,9 +118,9 @@ $nomcarpeta = $_GET["nomcarpeta"];
     <head>
         
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
         <script src="../estilos/js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="../estilos/js/bootstrap.js" type="text/javascript"></script>
-        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
         <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <!-- Recursos from Free Bootstrap -->
@@ -130,7 +130,7 @@ $nomcarpeta = $_GET["nomcarpeta"];
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
         <!-- Custom styles for this template-->
-        <link href="../estilos/css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
 
         <!--datables CSS básico-->
         <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
@@ -251,59 +251,6 @@ echo "if(num==1){";
     </script>
 
     <body class="PageBODY" onLoad='document.getElementById("cajarad").focus();'>
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="ml-5 font-weight-bold text-primary">Búsqueda Clásica</h6>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <tbody>
-                            <div class="row">
-                                <div class="col">Radicado</div>
-                                <div class="col"></div>
-                                <div class="col">Identificaci&oacute;n</div>
-                                <div class="col"></div>
-                                <div class="col">Expediente</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">Filtrar por</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Buscar por</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Buscar en Radicados</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Desde la fecha</div>
-                                <div class="col"></div>
-                                <div class="col">Hasta la fecha</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Tipo de Documento</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Dependencia Actual</div>
-                                <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">Limpiar</div>
-                                <div class="col">B&uacute;squedad</div>
-                            </div>
-                            
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
         <br>
         <center>
             <table>
@@ -511,10 +458,10 @@ echo "if(num==1){";
                     <div id="titulo" style="width: 97.3%;margin-left: 1.4%;">
                         <div>
                             <label style="margin-left: 42%;"><?= $sFormTitle ?></label>
-                            <button type="button" style="margin-left: 10%;" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            <button type="button" style="margin-left: 10%;" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                                 Full Text Search
                             </button>
-                            <a type="button" class="btn btn-primary2" style="margin-left: 1%;" href="../busqueda/busquedaExp.php?<?= $phpsession ?>&<? echo "&fechah=$fechah&primera=1&ent=2"; ?>">B&uacute;squeda&nbsp;Expediente</a>
+                            <a type="button" class="btn btn-success" style="margin-left: 1%;" href="../busqueda/busquedaExp.php?<?= $phpsession ?>&<? echo "&fechah=$fechah&primera=1&ent=2"; ?>">B&uacute;squeda&nbsp;Expediente</a>
                         </div>
                     </div>
 

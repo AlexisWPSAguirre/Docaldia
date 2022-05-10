@@ -251,7 +251,7 @@ $logo = 'logoEntidad.png';
     <body  style="overflow: hidden;" onload="modalinfo()" id="page-top">
         <div id="wrapper">
             <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -266,7 +266,7 @@ $logo = 'logoEntidad.png';
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="index_frames.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
                 </li>
@@ -351,7 +351,7 @@ $logo = 'logoEntidad.png';
 
                 <!-- Sidebar Toggler (Sidebar) -->
                 <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
                 </div>
 
             </ul>
@@ -365,7 +365,7 @@ $logo = 'logoEntidad.png';
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION['usua_nomb'] ?><p class="fixed-p"><?= $_SESSION['depe_nomb'] ?></p></span>                                    
                                     <img class="img-profile rounded-circle"
-                                        src="img/undraw_profile.svg">
+                                        src="estilos/docaldia_imagen/undraw_profile.svg">
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

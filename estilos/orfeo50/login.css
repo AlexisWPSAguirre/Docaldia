@@ -50,7 +50,7 @@ button:hover {
   width: 110px;
   border-radius: 50%;
   position: absolute;
-  top: -20px;
+  top: -40px;
   left: calc(50% - 50px);
   
 }
