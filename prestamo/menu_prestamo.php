@@ -95,7 +95,7 @@ $ESTILOS_PATH2 =$_SESSION['ESTILOS_PATH2'];
             if(opcionM!=""){ seleccionar(opcionM); }
          </script>
          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-               <h6 id="titulo" class="m-0 font-weight-bold text-primary">Prestamo y Control de Documentos</h6>
+               <h6 id="titulo" class="m-0 font-weight-bold text-success">Prestamo y Control de Documentos</h6>
          </div>
          <div class="card-body">
                <a class="vinculos" href="javascript:seleccionar(1);">Prestamo de documentos</a>

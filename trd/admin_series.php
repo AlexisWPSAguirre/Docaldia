@@ -86,6 +86,24 @@
       <head>
           <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
           <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+
+
+          <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
           <script>
               function regresar() {
                   document.adm_serie.submit();
@@ -143,15 +161,15 @@
           <br>
           <form method="post" action="<?= $encabezadol ?>" name="adm_serie">
               <center>
-                  <div id="titulo" style="width: 770px;" align="center">Series documentales</div>
+                  <div id="titulo" style="width: 770px;" align="center" class="text-success">Series documentales</div>
                   <TABLE width="770" class="borde_tab" border="1" cellspacing="5">
                       <TR>
                           <TD width="125" height="21"  class='titulos2'><label for="codserieI"> C&oacute;digo</label></td>
-                          <TD valign="top" align="left" class='listado2'><input type=text id="codserieI" name=codserieI value='<?= $codserieI ?>' class='tex_area' title="Ingrese el código de la serie documental a buscar, insertar o modificar"size=11 maxlength="2" ></td>
+                          <TD valign="top" align="left" class='listado2'><input type=text id="codserieI" name=codserieI value='<?= $codserieI ?>' class='form-control col-2' title="Ingrese el código de la serie documental a buscar, insertar o modificar"size=11 maxlength="2" ></td>
                       </tr>
                       <tr>
                           <TD height="26" class='titulos2'><label for="detaserie">Descripci&oacute;n</label></td>
-                          <TD valign="top" align="left" class='listado2'><input type=text id="detaserie" name=detaserie value='<?= $detaserie ?>' title="Ingrese la descripción de la serie documental a buscar, insertar o modificar" class='tex_area' size=75 maxlength="75" ></td>
+                          <TD valign="top" align="left" class='listado2'><input type=text id="detaserie" name=detaserie value='<?= $detaserie ?>' title="Ingrese la descripción de la serie documental a buscar, insertar o modificar" class='form-control' size=75 maxlength="75" ></td>
                       </tr>
                       <tr>
                           <TD height="26" class='titulos2'><label for="fecha_busq">Fecha inicial</label><br></td>
@@ -176,10 +194,10 @@
                       <tr>
                           <td height="26" colspan="3" valign="top" class='listado1'>
                       <center>
-                          <input type=submit name=buscar_serie Value='Buscar' class=botones aria-label="Buscar serie por parámetros ingresados">
-                          <input type=submit name=insertar_serie Value='Insertar' class=botones onclick="return val_datos();" aria-label="Añadir nueva serie con datos ingresados">
-                          <input type=submit name=actua_serie Value='Modificar' class=botones onclick="return val_datos();" aria-label="Guardar cambios de serie">
-                          <input type="reset"  name=aceptar class=botones id=envia22  value='Cancelar' aria-label="Cancelar y no guardar nada">
+                          <input type=submit name=buscar_serie Value='Buscar' class='btn btn-warning' aria-label="Buscar serie por parámetros ingresados">
+                          <input type=submit name=insertar_serie Value='Insertar' class='btn btn-warning' onclick="return val_datos();" aria-label="Añadir nueva serie con datos ingresados">
+                          <input type=submit name=actua_serie Value='Modificar' class='btn btn-warning' onclick="return val_datos();" aria-label="Guardar cambios de serie">
+                          <input type="reset"  name=aceptar class='btn btn-warning' id=envia22  value='Cancelar' aria-label="Cancelar y no guardar nada">
                       </center>
                       </td>
                       </tr>

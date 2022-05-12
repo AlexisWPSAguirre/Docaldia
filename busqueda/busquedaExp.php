@@ -244,6 +244,25 @@ $cmb_dep = $rs->GetMenu2('dependenciaSel', $dependenciaSel, $blank1stItem = "999
         <!--<link rel="stylesheet" href="Site.css" type="text/css">-->
         <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+
+        <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
+
+
         <script>
             function limpiar(){
                 document.Search.elements['nume_expe'].value = "";
@@ -271,9 +290,9 @@ $cmb_dep = $rs->GetMenu2('dependenciaSel', $dependenciaSel, $blank1stItem = "999
                             <td valign="top">
                                 <input type="hidden" name="FormName" value="Search"><input type="hidden" name="FormAction" value="search">
                                 <div id="titulo">
-                                    <label style="margin-left: 38%;">B&uacute;squeda de Expedientes</label>
+                                    <label style="margin-left: 38%;" class="text-success">B&uacute;squeda de Expedientes</label>
                                     <!--<a class="vinculosCabezote"  href="../busqueda/busquedaExp.php?<?= $phpsession ?>&<? ECHO "&fechah=$fechah&primera=1&ent=2"; ?>">B&uacute;squeda Expediente</a>-->
-                                    <a type="button" class="btn btn-primary2" style="margin-left: 23%;" href=../busqueda/busquedaPiloto.php?<?= $phpsession ?>&krd=<?= $krd ?>&<? ECHO "&fechah=$fechah&primera=1&ent=2&s_Listado=VerListado"; ?>">B&uacute;squeda Cl&aacute;sica</a>
+                                    <a type="button" class="btn btn-success" style="margin-left: 23%;" href=../busqueda/busquedaPiloto.php?<?= $phpsession ?>&krd=<?= $krd ?>&<? ECHO "&fechah=$fechah&primera=1&ent=2&s_Listado=VerListado"; ?>">B&uacute;squeda Cl&aacute;sica</a>
                                 </div>
                                 <table border=1 cellpadding=0 cellspacing=2 class='borde_tab' style="width: 1250px;" >
                                     <tbody>
@@ -385,8 +404,8 @@ $cmb_dep = $rs->GetMenu2('dependenciaSel', $dependenciaSel, $blank1stItem = "999
 
                                         <tr> 
                                             <td colspan="6" class='listado1' style="text-align: right;">
-                                                <input class="botones" value="Limpiar" onclick="limpiar();" type="button">
-                                                <input class="botones" value="B&uacute;squeda" type="submit">
+                                                <input class="btn btn-warning" value="Limpiar" onclick="limpiar();" type="button">
+                                                <input class="btn btn-warning" value="B&uacute;squeda" type="submit">
                                             </td>
                                         </tr>
                                     </tbody> 

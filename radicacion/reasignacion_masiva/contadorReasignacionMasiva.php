@@ -6,4 +6,4 @@ $queryContadorReasignadosMasivos = "SELECT COUNT(*) AS CONTADOR FROM radicado WH
 $rsContadorReasignadosMasivos = $db->conn->query($queryContadorReasignadosMasivos);
 ?>
 
-<a href='cuerpo.php?<?= $phpsession ?>&adodb_next_page=1&fechah=<?php echo "$fechah&nomcarpeta=NULL&carpeta=14&tipo_carpt=0&adodb_next_page=1"; ?>'>Reasignación masiva<span class="badge badge-danger badge-counter"><?= $rsContadorReasignadosMasivos->fields["CONTADOR"]; ?></span></a>
+<a class="text-success" href='cuerpo.php?<?= $phpsession ?>&adodb_next_page=1&fechah=<?php echo "$fechah&nomcarpeta=NULL&carpeta=14&tipo_carpt=0&adodb_next_page=1"; ?>'>Reasignación masiva<span class="badge badge-warning badge-counter m-3 "><?= $rsContadorReasignadosMasivos->fields["CONTADOR"]; ?></span></a>

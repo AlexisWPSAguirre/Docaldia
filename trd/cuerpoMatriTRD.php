@@ -59,8 +59,26 @@ $where_fecha = "";
 ?>
 <html>
     <head>
-        <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+
+        <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
+
         <script src="<?= $url_raiz ?>/estilos/js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="<?= $url_raiz ?>/estilos/js/bootstrap.min.js" type="text/javascript"></script>
     </head>
@@ -109,7 +127,7 @@ $where_fecha = "";
             <center>
                 <TABLE width="550" border="1" class="borde_tab" cellspacing="5">
                     <tr>
-                    <div id="titulo" style="width: 550px; " align="center">Matriz TDR</div>
+                    <div id="titulo" style="width: 550px; " align="center" class="text-success">Matriz TDR</div>
                     </tr>
                     <TR>
                         <TD width="125" height="21"  class='titulos2'><label for="coddepe"> Dependencia</label></td>
@@ -195,8 +213,8 @@ $where_fecha = "";
                     <tr>
                         <td height="26" colspan="4" valign="top" class='listado1'> 
                     <center>
-                        <input type=submit name=actu_mtrd value='Actualizar' class=botones_mediano aria-label="Actualizar tabla con los parámetros escogidos">
-                        <input name="aceptar" type="button"  class="botones_mediano" id="envia22"  onClick="window.close();" value="Cancelar" aria-label="salir sin hacer nada">
+                        <input type=submit name=actu_mtrd value='Actualizar' class="btn btn-warning" aria-label="Actualizar tabla con los parámetros escogidos">
+                        <input name="aceptar" type="button"  class="btn btn-warning" id="envia22"  onClick="window.close();" value="Cancelar" aria-label="salir sin hacer nada">
                     </center>
                     </td>
                     </tr>

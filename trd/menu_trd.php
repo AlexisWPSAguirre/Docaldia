@@ -84,7 +84,7 @@ $phpsession = session_name() . "=" . session_id();
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 id="titulo" class="m-0 font-weight-bold text-primary">Administraci&oacute;n - Tablas de retenci&oacute;n documental</h6>
+                                    <h6 id="titulo" class="m-0 font-weight-bold text-success">Administraci&oacute;n - Tablas de retenci&oacute;n documental</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">

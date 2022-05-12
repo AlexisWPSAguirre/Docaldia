@@ -117,7 +117,7 @@ $nomcarpeta = $_GET["nomcarpeta"];
 <html>
     <head>
         
-        <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+        <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>orfeo.css">
         <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
         <script src="../estilos/js/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="../estilos/js/bootstrap.js" type="text/javascript"></script>
@@ -143,21 +143,21 @@ $nomcarpeta = $_GET["nomcarpeta"];
             .ui-autocomplete { height: 200px; width: 200px; overflow-y: scroll; overflow-x: hidden;}
 
             .borde_tabConsultas{
-                color: #FFF;
                 font-family: "Source Sans Pro",sans-serif;
                 border-style: solid;
                 border-width: 1px;
-                border-color: #808080;
+                border-color: #c3b8b8;
                 border-bottom-color: rgba(128, 128, 128, 0);
             }
 
             .campoTextoBusqueda{
-                height: 39px;
+                height: 46px;
                 padding-top: 3px;
             }
 
             .labelBusuqueda{
                 padding-top: 5px;
+
             }
         </style>
     </head>
@@ -455,9 +455,9 @@ echo "if(num==1){";
                     <input type="hidden" name=<?= session_name() ?> value=<?= session_id() ?>>
                     <input type="hidden" name="FormName" value="Search"><input type="hidden" name="FormAction" value="search">
 
-                    <div id="titulo" style="width: 97.3%;margin-left: 1.4%;">
+                    <div id="titulo" style="width: 97.3%;margin-left: 1.4%;margin-bottom:1%">
                         <div>
-                            <label style="margin-left: 42%;"><?= $sFormTitle ?></label>
+                            <label style="margin-left: 34%;" class="text-success"><?= $sFormTitle ?></label>
                             <button type="button" style="margin-left: 10%;" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                                 Full Text Search
                             </button>
@@ -740,9 +740,9 @@ echo "if(num==1){";
                         </div>
 
                         <div class="row borde_tabConsultas">
-                            <div class="listado1"  style="width: 100%; text-align: right; campoTextoBusqueda" >
-                                <input class="botones" type="button" value="Limpiar" onclick="limpiar();">
-                                <input class="botones" type="submit" name=Busqueda value="B&uacute;squeda">
+                            <div class="listado1"  style="width: 100%; text-align: right; margin-top: 10px;" >
+                                <input class="btn btn-warning" type="button" value="Limpiar" onclick="limpiar();">
+                                <input class="btn btn-warning" type="submit" name=Busqueda value="B&uacute;squeda">
                             </div>    
                         </div>
                     </div>

@@ -84,7 +84,7 @@ $encabezadol = "$PHP_SELF?" . session_name() . "=" . session_id() . "&num_exp=$n
         <div class="card shadow mb-4">
         <form name=from1 action="<?= $encabezadol ?>" method='post' action='archivo.php?<?= session_name() ?>=<?= trim(session_id()) ?>&krd=<?= $krd ?>&<?= "&num_exp=$num_exp" ?>'>
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 id="titulo" class="m-0 font-weight-bold text-primary">Men&uacute; de Archivo</h6>
+                <h6 id="titulo" class="m-0 font-weight-bold text-success">Men&uacute; de Archivo</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">

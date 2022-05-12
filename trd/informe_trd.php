@@ -51,8 +51,24 @@ $db = new ConnectionHandler("$ruta_raiz");
 $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 ?>
 <head>
-    <link href="<?= $ruta_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+    
     <link rel="stylesheet" href="<?= $ruta_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+
+    <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
 </head>
 <BODY>
     <div id="spiffycalendar" class="text"></div>
@@ -60,7 +76,7 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
     <br>
     <form name="inf_trd"  action='../trd/informe_trd.php?<?= session_name() . "=" . session_id() . "&krd=$krd&fecha_h=$fechah" ?>' method=post>
         <center>
-            <div id="titulo" style="width: 794px;" align="center">Informe tablas de retenci&oacute;n documental</div> 
+            <div id="titulo" style="width: 794px;" align="center" class="text-success">Informe tablas de retenci&oacute;n documental</div> 
             <TABLE width="796" class='borde_tab' border='1' align="center">
                 <!--DWLayoutTable-->
                 <TR>
@@ -80,14 +96,14 @@ $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
                     </td>
                     <td height="26" colspan="2" valign="top" class='listado1'> 
                 <center>
-                    <input type=SUBMIT name=generar_informe value=' Generar Informe' class='botones' aria-label="Generar informe detallado de las tablas de gestión documental">
+                    <input type=SUBMIT name=generar_informe value=' Generar Informe' class='btn btn-warning' aria-label="Generar informe detallado de las tablas de gestión documental">
                     <!--<input type=SUBMIT name=generar_archicsv value=' Generar .CSV' class='botones'>-->
                 </center>
                 </td>
                 </TR>
             </TABLE>
             <br>
-            <table border='1' class='borde_tabReducido' style="font-size: 10px">
+            <table class='borde_tabReducido' style="font-size: 10px">
                 <tr>
                     <td colspan="4" class=titulos3><center>Conversiones</center></td>
                 </tr>

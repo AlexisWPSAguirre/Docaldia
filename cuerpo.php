@@ -172,49 +172,13 @@ include "./envios/paEncabeza.php";
     ?>
 
     <div class="row">
-        <div class="col-xl-3 col-md-6 mb-4">
-           <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            <?php
-                                include './radicacion/reasignacion_masiva/contadorReasignacionMasiva.php';
-                            ?>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="h5 mb-0 ml-4 font-weight-bold text-gray-800">
+            <?php
+                include './radicacion/reasignacion_masiva/contadorReasignacionMasiva.php';
+            ?>
         </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                <img src='<?=$url_raiz?>/iconos/semaforo_rojo.png' style="width: auto; margin-left: 2px;" alt='Radicados Vencidos' title='Radicados Vencidos'>
-                                &nbsp;Radicados Vencidos
-                            </div>
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                <img src='<?=$url_raiz?>/iconos/semaforo_amarillo.png' style="width: auto; margin-left: 2px;" alt='Radicados Pronto Vencer' title='Radicados Pronto Vencer'>
-                                &nbsp;Radicados Pronto Vencer (2 días)
-                            </div>
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                <img src='<?=$url_raiz?>/iconos/semaforo_verde.png' style="width: auto; margin-left: 2px; height: 20px" alt='Radicados al Dia' title='Radicados al Dia'>
-                                &nbsp;Radicados al Día
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+        
 
     </div>
     <table id="searchTable" width="100%" align="center" cellspacing="0" cellpadding="0" class="borde_tab" style="display: none">

@@ -11,6 +11,12 @@ input {
     margin-left: 5px;
 }
 
+td{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c3b8b8;
+}
+
 td p{
     font-size: 12px;
 }
@@ -86,13 +92,18 @@ a {
     ***/
     text-decoration: none;
 }
+.borde_tabConsultas {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c3b8b8;
+}
 
 .listado1 {
+    margin-top: 10px;
     font-size: 12px;
     text-transform: none;
     color: #000000;
     text-decoration: none;
-    background-color:  rgb(222, 222, 222);
     text-align: left;
     vertical-align: middle;
     height: 30px;
@@ -124,7 +135,7 @@ a {
     font-size: 12px;
     font-weight: bolder;
     color: rgb(255, 255, 255);
-    background-color: rgb(28, 64, 86);
+    background-color: #1cc88a;
     text-indent: 5pt;
     vertical-align: middle;
     text-align: center;
@@ -164,8 +175,7 @@ a {
     font-size: 12px;
     font-style: normal;
     /*font-weight: bolder;*/
-    color: #FFFFFF;
-    background-color: #8f0000;
+    
     text-indent: 5pt;
     vertical-align: middle;
 }
@@ -175,13 +185,12 @@ a {
     padding: 0.5%;
     font-size: 21px;
     /*background-color: #D33F4B;*/
-    background-color: #f8f7f4;
     border-radius: 30px 30px 0px 0px;
     color: #858796;
     font-family: "Source Sans Pro",sans-serif;
     border-style: solid;
     border-width: 1px;
-    border-color: #808080;
+    border-color: #c3b8b8;
     border-bottom-color: rgba(128, 128, 128, 0);
 }
 
@@ -281,7 +290,8 @@ a {
     /*font-weight: bolder;*/
     background-color: #FFFFFF;
     color: #000000;
-    border: thin solid #999999;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
 }
 
 .selectReducido {
@@ -336,9 +346,7 @@ a {
 }
 
 .menuEnlaces td{
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 14px;
+    padding: 14px;
 }
 
 .leidos2 {

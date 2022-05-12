@@ -66,6 +66,22 @@ $codserie = $_POST['codserie'];
     <head>
         <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+        <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
     </head>
     <body bgcolor="#FFFFFF">
         <div id="spiffycalendar" class="text"></div>
@@ -94,7 +110,7 @@ $codserie = $_POST['codserie'];
             <center>
                 <table  class="borde_tab" style="width: 77%;" border="1" cellspacing="5">
                     <tr>
-                         <div id="titulo" style="width: 77%;" align="center">Subseries documentales</div>
+                         <div id="titulo" style="width: 77%;" align="center" class="text-success">Subseries documentales</div>
                     </tr>
                     <TR>
                         <TD class='titulos2'> <label for="codserie">C&oacute;digo Serie</label><br>
@@ -237,10 +253,10 @@ if (isset($_POST['actua_subserie'])) {
                     <tr>
                         <td colspan="4" valign="top" class='listado1'> 
                     <center>
-                        <input type=submit name=buscar_subserie Value='Buscar' class=botones aria-label="Buscar la subserie por los criterios ingresados">
-                        <input type=submit name=insertar_subserie Value='Insertar' class=botones aria-label="Guardar la subserie ingresada">
-                        <input type=submit name=actua_subserie Value='Modificar' class=botones aria-label="Guardar cambios de la subserie">
-                        <input type="reset"  name=aceptar class=botones id=envia22  value='Cancelar' aria-label="Salir sin guardar cambios">
+                        <input type=submit name=buscar_subserie Value='Buscar' class='btn btn-warning' aria-label="Buscar la subserie por los criterios ingresados">
+                        <input type=submit name=insertar_subserie Value='Insertar' class='btn btn-warning' aria-label="Guardar la subserie ingresada">
+                        <input type=submit name=actua_subserie Value='Modificar' class='btn btn-warning' aria-label="Guardar cambios de la subserie">
+                        <input type="reset"  name=aceptar class='btn btn-warning' id=envia22  value='Cancelar' aria-label="Salir sin guardar cambios">
                         </td>
                         </tr>
                         </table>

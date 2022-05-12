@@ -70,7 +70,7 @@ if ($rs_trad->RecordCount() >= 0) {
     $tipos = "<table width='100%'><tr><td height='26' class='listado2' width='100%'>";
     $cmp = "SGD_TPR_TP";
     while ($arr = $rs_trad->FetchRow()) {
-        $tipos .= "&nbsp;<label for=" . $cad . $arr['SGD_TRAD_CODIGO'] . ">" . $arr['SGD_TRAD_DESCR'] . "</label><input type='checkbox' name='" . $cad . $arr['SGD_TRAD_CODIGO'] . "' id='" . $cad . $arr['SGD_TRAD_CODIGO'] . "' value=1 title='Active la casilla para indicar el tipo o tipos de documento' >" . "&nbsp"; //"&nbsp;".$arr['SGD_TRAD_DESCR']."&nbsp;&nbsp;";
+        $tipos .= "&nbsp;<label for=" . $cad . $arr['SGD_TRAD_CODIGO'] . ">" . $arr['SGD_TRAD_DESCR'] . "</label><input type='checkbox' name='" . $cad . $arr['SGD_TRAD_CODIGO'] . "' id='" . $cad . $arr['SGD_TRAD_CODIGO'] . "' value=1 title='Active la casilla para indicar el tipo o tipos de documento' class='m-2'>" . "&nbsp"; //"&nbsp;".$arr['SGD_TRAD_DESCR']."&nbsp;&nbsp;";
         $ins_cmp .= $cmp . $arr['SGD_TRAD_CODIGO'] . ",";
         (isset($_POST[$cad . $arr['SGD_TRAD_CODIGO']])) ? $ins_vlr .= "1," : $ins_vlr .= "0,";
         (isset($_POST[$cad . $arr['SGD_TRAD_CODIGO']])) ? $vlr = "1" : $vlr = "0";
@@ -90,8 +90,27 @@ $ADODB_COUNTRECS = false;
 <html>
     <head>
         <title>Tipos documentales</title>
-        <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+
+        <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
+
+
+
         <script type="text/javascript">
             function regresar() {
                 document.adm_tipodoc.submit();
@@ -105,7 +124,7 @@ $ADODB_COUNTRECS = false;
         <form method="post" action="<?= $encabezadol ?>" name="adm_tipodoc"> 
             <table width="80%" class="borde_tab" cellspacing="1" border="1" align="center">
                 <tr>
-                <div id="titulo" style="width: 80%; margin-left: 10%;" align="center">Tipos documentales</div>
+                <div id="titulo" style="width: 80%; margin-left: 10%;" align="center" class="text-success">Tipos documentales</div>
                 </tr>
                 <?php
                 if ($_POST['actua_tdoc']) {
@@ -113,8 +132,8 @@ $ADODB_COUNTRECS = false;
                     <tr>
                         <td width="125" height="21"  class='titulos2'> C&oacute;digo<br> </td>
                         <td valign="top" align="left" class='listado2'>
-                            <input type=text name=codtdocI value='<?= $codtdocI ?>' class='tex_area' size=50 maxlength="7" >
-                            <input type=submit name=modi_tdoc Value='Grabar Modificacion' class=botones_largo >
+                            <input type=text name=codtdocI value='<?= $codtdocI ?>' class='tex_area form-control col-3 mb-2' size=50 maxlength="7" >
+                            <input type=submit name=modi_tdoc Value='Grabar Modificacion' class="btn btn-success" >
                         </td>
                         <!--<td height="21"></td>-->
                     </tr>
@@ -124,13 +143,13 @@ $ADODB_COUNTRECS = false;
                 <tr>
                     <td height="26" width="30%" class='titulos2'><label for="detatipod"> Descripci&oacute;n</label></td>
                     <td valign="top" align="left" class='listado2'>
-                        <input type=text name=detatipod value='<?= $detatipod ?>' id="detatipod" class='tex_area' size=50 maxlength="75" title="Descripción del tipo documental">
+                        <input type=text name=detatipod value='<?= $detatipod ?>' id="detatipod" class='tex_area form-control' size=50 maxlength="75" title="Descripción del tipo documental">
                     </td>
                 </tr>
                 <tr> 
                     <td height="26"  width="30%" class='titulos2'><label for="terminot">T&eacute;rmino tr&aacute;mite</label><br></td>
                     <td valign="top" align="left" class='listado2'>
-                        <input type=text name=terminot id="terminot" value='<?= $terminot ?>' class='tex_area' size=2 maxlength="2" title="Ingrese el número de días en que termina el trámite">
+                        <input type=text name=terminot id="terminot" value='<?= $terminot ?>' class='tex_area form-control' size=2 maxlength="2" title="Ingrese el número de días en que termina el trámite" style="width:10%">
                     </td>
                 </tr>
                 <tr> 
@@ -161,10 +180,10 @@ $ADODB_COUNTRECS = false;
                 <tr>
                     <td height="26" colspan="5" valign="top" class='listado1' align="center">
                 <center>
-                    <input type=submit name=buscar_dcto Value='Buscar' class=botones aria-label="Buscar tipos documentales por criterios ingresados">
-                    <input type=submit name=insertar_tdoc Value='Insertar' class=botones aria-label="Insertar nueva TRD">
-                    <input type=submit name=actua_tdoc Value='Modificar' class=botones aria-label="Editar TRD existente">
-                    <input type="reset"  name=aceptar class=botones id=envia22  value='Cancelar' aria-label="Salir sin hacer nada">
+                    <input type=submit name=buscar_dcto Value='Buscar' class='btn btn-warning' aria-label="Buscar tipos documentales por criterios ingresados">
+                    <input type=submit name=insertar_tdoc Value='Insertar' class='btn btn-warning' aria-label="Insertar nueva TRD">
+                    <input type=submit name=actua_tdoc Value='Modificar' class='btn btn-warning' aria-label="Editar TRD existente">
+                    <input type="reset"  name=aceptar class='btn btn-warning' id=envia22  value='Cancelar' aria-label="Salir sin hacer nada">
                 </center>
                 </td>
                 </tr>

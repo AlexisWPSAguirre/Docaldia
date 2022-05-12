@@ -60,8 +60,25 @@ $where_fecha = "";
 ?>
 <html>
     <head>
-        <link href="<?= $url_raiz . $ESTILOS_PATH2 ?>bootstrap.css" rel="stylesheet" type="text/css"/>
+        
         <link rel="stylesheet" href="<?= $url_raiz . $_SESSION['ESTILOS_PATH_ORFEO'] ?>">
+        
+        <!-- Recursos from Free Bootstrap -->
+        
+        <!-- Custom fonts for this template-->
+        <link href="../estilos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="../estilos/css/sb-admin-2.css" rel="stylesheet">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../estilos/vendor/datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS--> 
+        <link rel="stylesheet"  type="text/css" href="../estilos/vendor/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">      
+        <!-- ICONS BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
+
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" >
@@ -129,7 +146,7 @@ $where_fecha = "";
             <!--<table class=borde_tab width='100%' cellspacing="5"><tr><td class=titulos2><center>MODIFICACION RELACION TRD</center></td></tr></table>-->
             <center>
                 <br>
-                <div id="titulo" style="width: 950px;" align="center">Modificaci&oacute;n relaci&oacute;n TRD</div> 
+                <div id="titulo" style="width: 950px;" align="center" class="text-success">Modificaci&oacute;n relaci&oacute;n TRD</div> 
                 <TABLE width="950" border='1' class="borde_tab" cellspacing="5">  
                     <TR>
                         <td width="125" height="21"  class='titulos2'> <label for="coddepe">Dependencia</label></td>
@@ -221,8 +238,8 @@ $where_fecha = "";
                     <tr>
                         <td height="26" colspan="4" valign="top" class='listado1'> 
                     <center>
-                        <input type=submit name=activar_trda value='Activar' class=botones_mediano aria-label="Activar relación">
-                        <input type=submit name=desactivar_trda value='Desactivar' class=botones_mediano aria-label="Desactivar relación"> 
+                        <input type=submit name=activar_trda value='Activar' class="btn btn-warning" aria-label="Activar relación">
+                        <input type=submit name=desactivar_trda value='Desactivar' class="btn btn-warning" aria-label="Desactivar relación"> 
                         </td>
                         </tr>
                         </table>
